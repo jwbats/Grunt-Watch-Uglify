@@ -1,4 +1,4 @@
-Example Grunt Watch/Uglify/Sass
+Example Grunt project for tasks: Watch/Uglify/Sass.
 
 0. npm install -g grunt-cli (set up grunt command in path)
 1. Check contents of package.json, make sure grunt and all required plugins are included).
