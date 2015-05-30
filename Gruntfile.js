@@ -20,15 +20,30 @@ module.exports = function(grunt) {
 		  ]
 		}
 	},
+	sass: {                                             // Task
+		dist: {                                         // Target
+			options: {                                  // Target options
+				style: 'expanded'
+			},
+			files: {                                    // Dictionary of files
+				'build/style.css': 'project/style.scss' // 'destination': 'source'
+			}
+		}
+	},
 	watch: {
 		uglify: {
 		  files: ['project/*.js'],
 		  tasks: ['uglify'],
+		},
+		sass: {
+			files: ['project/*.scss'],
+			tasks: ['sass'],
 		}
 	}
   });
 
   // load installed plugins
+  grunt.loadNpmTasks('grunt-contrib-sass');
   grunt.loadNpmTasks('grunt-contrib-uglify');
   grunt.loadNpmTasks('grunt-contrib-watch');
 
